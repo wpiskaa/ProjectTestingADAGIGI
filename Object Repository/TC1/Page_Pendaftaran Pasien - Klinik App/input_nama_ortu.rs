@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>input_nama_ortu</name>
+   <tag></tag>
+   <elementGuidId>a84b62f5-2e77-4997-aeaf-92c6bbd554e5</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@name = 'nama_ortu']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>[name=&quot;nama_ortu&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>input[name=&quot;nama_ortu&quot;]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>input</value>
+      <webElementGuid>16b789bd-952a-4f8a-b819-af2cb48b7847</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>text</value>
+      <webElementGuid>c0d8d883-b230-44a9-b21c-8c47d17d2032</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>nama_ortu</value>
+      <webElementGuid>56814d7d-c961-4063-92da-d62185ff0307</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>w-full bg-gray-50 rounded-xl border-none p-4 focus:ring-2 focus:ring-blue-500 outline-none</value>
+      <webElementGuid>ecdb48da-3183-4592-aad9-c430d743ce4a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>parent</name>
+      <type>Main</type>
+      <value>md5.v1-a91b0bdd6a30bc306fa898fe4e91b2f8</value>
+      <webElementGuid>b3ab7b1d-c485-4c03-b8a5-0448a9947e1b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@name = 'nama_ortu']</value>
+      <webElementGuid>286fc3f4-ace8-4c4f-95f8-c4d581036326</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//*[@name = 'nama_ortu']</value>
+      <webElementGuid>5ced1eb9-6a7c-47c2-a683-b54a3a900b96</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//input[@type = 'text' and @name = 'nama_ortu']</value>
+      <webElementGuid>096454e7-cf0f-4e2f-a966-e3d2014762c2</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

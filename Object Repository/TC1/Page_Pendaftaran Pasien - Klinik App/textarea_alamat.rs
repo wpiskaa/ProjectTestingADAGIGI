@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>textarea_alamat</name>
+   <tag></tag>
+   <elementGuidId>2a3715e8-16ac-4ac0-8d1e-da588c676fe1</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@name = 'alamat']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>[name=&quot;alamat&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>textarea[name=&quot;alamat&quot;]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>textarea</value>
+      <webElementGuid>f1e0012b-0d04-49ce-a591-fd81398ed633</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>alamat</value>
+      <webElementGuid>159b00ba-9966-42a5-aa18-bb6e5cc2e27d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>rows</name>
+      <type>Main</type>
+      <value>2</value>
+      <webElementGuid>4b661187-5d79-4b5e-ac21-48b34f1805b5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>w-full bg-gray-50 rounded-xl border-none p-4 focus:ring-2 focus:ring-blue-500 outline-none</value>
+      <webElementGuid>2c69b02b-4b40-4005-9640-1c184a121367</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>parent</name>
+      <type>Main</type>
+      <value>md5.v1-10ce58862ebb49f6acf0d56a68d6d263</value>
+      <webElementGuid>937d7b57-f7a4-4049-b579-04087e526ab8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@name = 'alamat']</value>
+      <webElementGuid>0e965262-1910-4e98-8724-63fcd5afe837</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//*[@name = 'alamat']</value>
+      <webElementGuid>973cf2ca-932b-4dac-8bd4-28f18ed9f727</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//textarea[@name = 'alamat']</value>
+      <webElementGuid>298dd633-5ba5-4cb2-aa02-7f44a89a6bb4</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
