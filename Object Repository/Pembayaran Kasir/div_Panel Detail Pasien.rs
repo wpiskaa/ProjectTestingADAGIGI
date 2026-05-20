@@ -3,15 +3,15 @@
    <description></description>
    <name>div_Panel Detail Pasien</name>
    <tag></tag>
-   <elementGuidId>e01f6e81-c2a0-4ace-b903-c77ff8a7e62a</elementGuidId>
+   <elementGuidId>1145938c-fb4a-40a1-9b54-69a7b37762ac</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id="detail-panel"] | //div[contains(@class,"right-panel")]</value>
+         <value>//h2[contains(., "Ringkasan Tagihan")]/ancestor::div[contains(@class, "lg:col-span-8")]</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#detail-panel</value>
+         <value>.lg\:col-span-8</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -29,14 +29,14 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>72d4f5a8-ef86-4354-a8e6-917181f0b00e</webElementGuid>
+      <webElementGuid>73f96689-a09e-4f5c-bd3e-1d5b1cbcfe36</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//*[@id="detail-panel"] | //div[contains(@class,"right-panel")]</value>
-      <webElementGuid>158141ed-b71a-46de-9167-d2310b6969b8</webElementGuid>
+      <value>//h2[contains(., "Ringkasan Tagihan")]/ancestor::div[contains(@class, "lg:col-span-8")]</value>
+      <webElementGuid>69ca813c-f949-4c05-834c-6650c9618669</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

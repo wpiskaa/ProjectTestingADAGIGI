@@ -3,15 +3,15 @@
    <description></description>
    <name>div_Card Pasien Andhika</name>
    <tag></tag>
-   <elementGuidId>8ad20cc1-593a-4695-8305-545feb2eb05c</elementGuidId>
+   <elementGuidId>4d04c394-cb8f-4133-8364-bcbf5590e878</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id="sidebar-list"]//div[contains(.,"Andhika")]</value>
+         <value>//h3[contains(., "Andhika")]/ancestor::a</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#sidebar-list div</value>
+         <value>a.block.p-4</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -28,15 +28,15 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
-      <webElementGuid>461109e4-a78f-4f50-a565-12bf2b997be3</webElementGuid>
+      <value>a</value>
+      <webElementGuid>7c838ed3-32c9-4ce0-9c9c-fccfd2becd42</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//div[@id="sidebar-list"]//div[contains(.,"Andhika")]</value>
-      <webElementGuid>49a0e5e5-2552-411e-9468-54554a20e817</webElementGuid>
+      <value>//h3[contains(., "Andhika")]/ancestor::a</value>
+      <webElementGuid>f00b2631-3d54-486b-9ed4-defbfa856100</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

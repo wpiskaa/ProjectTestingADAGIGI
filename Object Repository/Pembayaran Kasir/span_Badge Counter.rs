@@ -3,15 +3,15 @@
    <description></description>
    <name>span_Badge Counter</name>
    <tag></tag>
-   <elementGuidId>b0f10781-4e44-4464-aece-43668b6ae6be</elementGuidId>
+   <elementGuidId>a841517a-0045-4f9b-a519-9e30cc2b27b9</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id="badge-count"]</value>
+         <value>//h2[contains(., "Menunggu Pembayaran")]/following-sibling::span</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#badge-count</value>
+         <value>span.bg-purple-100</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -29,14 +29,14 @@
       <name>tag</name>
       <type>Main</type>
       <value>span</value>
-      <webElementGuid>e90d761f-0421-4782-86a2-123cbceacad4</webElementGuid>
+      <webElementGuid>e3409ac3-632d-4b1f-b223-f2f68f271a25</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//*[@id="badge-count"]</value>
-      <webElementGuid>7e475fc4-4186-4c54-86ab-cdd26d46369e</webElementGuid>
+      <value>//h2[contains(., "Menunggu Pembayaran")]/following-sibling::span</value>
+      <webElementGuid>941997ad-01dd-48bc-996d-6959bfd056ef</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

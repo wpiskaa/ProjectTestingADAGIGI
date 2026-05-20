@@ -3,15 +3,15 @@
    <description></description>
    <name>div_Sidebar Pasien Pending</name>
    <tag></tag>
-   <elementGuidId>24644211-ab10-427a-b00a-8d5d9954872f</elementGuidId>
+   <elementGuidId>00924aec-aa42-4eb8-98b8-29c37eeaccf5</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id="sidebar-list"]</value>
+         <value>//h2[contains(., "Menunggu Pembayaran")]/ancestor::div[contains(@class, "lg:col-span-4")]</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#sidebar-list</value>
+         <value>.lg\:col-span-4</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -29,14 +29,14 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>8aa82df3-eb08-4d11-b795-c4c92750dcc0</webElementGuid>
+      <webElementGuid>a320de57-7c59-4f24-833a-11704b993139</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//*[@id="sidebar-list"]</value>
-      <webElementGuid>9bd55707-54bc-4376-a162-54c2423b1c22</webElementGuid>
+      <value>//h2[contains(., "Menunggu Pembayaran")]/ancestor::div[contains(@class, "lg:col-span-4")]</value>
+      <webElementGuid>7c7b91d0-1609-4684-93db-c8cd3f82d6e5</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
