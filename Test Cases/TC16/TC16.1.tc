@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-16.1 - Memeriksa dialog print otomatis muncul dan tombol navigasi tidak ikut tercetak (Hafiz Kurniawan)</description>
+   <name>TC16.1</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b8c9d0e1-f2a3-4567-bcde-678901234569</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-15.2 - Memeriksa error handling saat id_periksa tidak valid atau tidak ada (Hafiz Kurniawan)</description>
+   <name>TC15.2</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a7b8c9d0-e1f2-3456-abcd-567890123458</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_Card Pasien Andhika</name>
+   <tag></tag>
+   <elementGuidId>8ad20cc1-593a-4695-8305-545feb2eb05c</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id="sidebar-list"]//div[contains(.,"Andhika")]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#sidebar-list div</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value></value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>461109e4-a78f-4f50-a565-12bf2b997be3</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//div[@id="sidebar-list"]//div[contains(.,"Andhika")]</value>
+      <webElementGuid>49a0e5e5-2552-411e-9468-54554a20e817</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

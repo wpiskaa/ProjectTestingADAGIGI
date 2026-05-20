@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-15.1 - Memeriksa sistem bisa menampilkan informasi yang lengkap di cetak struk (Hafiz Kurniawan)</description>
+   <name>TC15.1</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f6a7b8c9-d0e1-2345-fabc-456789012347</testCaseGuid>
+</TestCaseEntity>

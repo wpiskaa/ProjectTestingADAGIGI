@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-14.1 - Memeriksa proses konfirmasi pembayaran berhasil mengubah status dan redirect ke struk (Hafiz Kurniawan)</description>
+   <name>TC14.1</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e5f6a7b8-c9d0-1234-efab-345678901236</testCaseGuid>
+</TestCaseEntity>

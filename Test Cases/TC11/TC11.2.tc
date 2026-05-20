@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-11.2 - Memeriksa perilaku sistem saat tidak ada data tagihan pending, daftar kosong (Hafiz Kurniawan)</description>
+   <name>TC11.2</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a1b2c3d4-e5f6-7890-abcd-ef1234567892</testCaseGuid>
+</TestCaseEntity>

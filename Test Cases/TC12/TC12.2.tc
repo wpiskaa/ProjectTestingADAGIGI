@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-12.2 - Memeriksa perilaku sistem saat belum ada pasien yang dipilih di kasir (Hafiz Kurniawan)</description>
+   <name>TC12.2</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c3d4e5f6-a7b8-9012-cdef-123456789014</testCaseGuid>
+</TestCaseEntity>

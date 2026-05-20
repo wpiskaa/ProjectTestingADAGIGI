@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-12.1 - Memeriksa perilaku sistem saat kasir memilih pasien dari daftar pending (Hafiz Kurniawan)</description>
+   <name>TC12.1</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b2c3d4e5-f6a7-8901-bcde-f12345678903</testCaseGuid>
+</TestCaseEntity>

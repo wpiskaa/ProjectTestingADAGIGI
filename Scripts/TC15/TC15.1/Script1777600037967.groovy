@@ -17,15 +17,32 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+// TC-15.1: Memeriksa Fungsi Cetak Struk Pembayaran (Konten Lengkap)
+// Tester: Hafiz Kurniawan | Tanggal: 21-Apr-26 | Status: Pass
+// Deskripsi: Memeriksa semua informasi struk tampil lengkap dan benar
+
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/index.php')
+// Akses halaman struk dengan id_periksa valid
+WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/views/cetak_struk.php?id_periksa=1')
 
-WebUI.click(findTestObject('Page_Sistem Manajemen Klinik/a_Rekam Medis'))
+WebUI.delay(1)
 
-WebUI.click(findTestObject('Rekam Medis/input_Ketik Nama atau RM'))
+// Verifikasi konten struk tampil
+WebUI.verifyElementPresent(findTestObject('Page_Struk Pembayaran - Faid Arya P/div_Konten Struk'), 10)
 
-WebUI.click(findTestObject('Rekam Medis/a_Antrean'))
+// Verifikasi No. RM tampil di struk
+WebUI.verifyElementPresent(findTestObject('Page_Struk Pembayaran - Faid Arya P/span_Nomor RM'), 10)
 
-WebUI.click(findTestObject('Rekam Medis/a_Faid Arya'))
+// Verifikasi nama pasien tampil (Andhika)
+WebUI.verifyTextPresent('Andhika', false)
 
+// Verifikasi total biaya tampil
+WebUI.verifyTextPresent('150.000', false)
+
+// Verifikasi footer "Terima kasih" tampil
+WebUI.verifyElementPresent(findTestObject('Page_Struk Pembayaran - Faid Arya P/p_Footer Terima Kasih'), 10)
+
+WebUI.verifyTextPresent('Terima kasih', false)
+
+WebUI.closeBrowser()

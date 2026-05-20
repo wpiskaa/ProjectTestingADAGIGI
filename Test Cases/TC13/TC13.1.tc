@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>TC-13.1 - Memeriksa kasir dapat mengubah total biaya sebelum konfirmasi pembayaran (Hafiz Kurniawan)</description>
+   <name>TC13.1</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d4e5f6a7-b8c9-0123-defa-234567890125</testCaseGuid>
+</TestCaseEntity>

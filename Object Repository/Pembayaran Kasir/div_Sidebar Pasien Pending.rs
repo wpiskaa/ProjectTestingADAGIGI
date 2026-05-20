@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_Sidebar Pasien Pending</name>
+   <tag></tag>
+   <elementGuidId>24644211-ab10-427a-b00a-8d5d9954872f</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id="sidebar-list"]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#sidebar-list</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value></value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>8aa82df3-eb08-4d11-b795-c4c92750dcc0</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//*[@id="sidebar-list"]</value>
+      <webElementGuid>9bd55707-54bc-4376-a162-54c2423b1c22</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
