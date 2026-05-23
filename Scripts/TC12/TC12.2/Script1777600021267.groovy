@@ -19,19 +19,24 @@ import org.openqa.selenium.Keys as Keys
 
 // TC-12.2: Memeriksa Fungsi Detail Ringkasan Tagihan (Belum Pilih Pasien)
 // Tester: Hafiz Kurniawan | Tanggal: 21-Apr-26 | Status: Pass
-// Deskripsi: Memeriksa panel kanan menampilkan pesan default saat belum ada pasien dipilih
 
+// 1. Buka browser
 WebUI.openBrowser('')
 
-// Akses kasir.php tanpa parameter id_periksa
-WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/views/kasir.php')
+// Reset database state to default
+WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/reset_db.php?state=default')
 
-WebUI.delay(1)
+// 2. Mengakses halaman Home index.php
+WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/index.php')
+WebUI.waitForPageLoad(10)
 
-// Verifikasi panel kanan menampilkan pesan default
+// 3. Mengklik menu Pembayaran untuk masuk ke kasir.php (tanpa parameter URL)
+WebUI.click(findTestObject('Page_Sistem Manajemen Klinik/a_Pembayaran'))
+WebUI.waitForPageLoad(10)
+
+// 4. Melihat panel kanan (Pesan placeholder)
 WebUI.verifyElementPresent(findTestObject('Pembayaran Kasir/div_Panel Default'), 10)
-
-// Verifikasi pesan "selesai diperiksa" tampil sebagai panduan
+WebUI.verifyTextPresent('Pilih Pembayaran', false)
 WebUI.verifyTextPresent('selesai diperiksa', false)
 
 WebUI.closeBrowser()

@@ -19,22 +19,29 @@ import org.openqa.selenium.Keys as Keys
 
 // TC-11.2: Memeriksa Fungsi Daftar Tagihan Pending (Daftar Kosong)
 // Tester: Hafiz Kurniawan | Tanggal: 21-Apr-26 | Status: Pass
-// Deskripsi: Memeriksa perilaku sistem saat tidak ada data pending (semua transaksi sudah Lunas)
 
+// 1. Membuka browser Chrome
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/views/kasir.php')
+// Reset database state to empty queue
+WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/reset_db.php?state=empty')
 
-// Verifikasi halaman Pembayaran Kasir terbuka
+// 2. Mengakses halaman Home index.php
+WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/index.php')
+WebUI.waitForPageLoad(10)
+
+// 3. Mengklik menu Pembayaran untuk masuk ke kasir.php
+WebUI.click(findTestObject('Page_Sistem Manajemen Klinik/a_Pembayaran'))
+WebUI.waitForPageLoad(10)
 WebUI.verifyTextPresent('Pembayaran Kasir', false)
 
-// Verifikasi badge counter menampilkan angka 0
-WebUI.verifyElementPresent(findTestObject('Pembayaran Kasir/span_Badge Counter'), 10)
+// 4. Melihat sidebar kiri (Pesan Belum ada antrean bayar)
+WebUI.verifyElementPresent(findTestObject('Pembayaran Kasir/div_Sidebar Pasien Pending'), 10)
+WebUI.verifyTextPresent('Belum ada antrean bayar', false)
 
+// 5. Memeriksa badge counter
+WebUI.verifyElementPresent(findTestObject('Pembayaran Kasir/span_Badge Counter'), 10)
 String badgeText = WebUI.getText(findTestObject('Pembayaran Kasir/span_Badge Counter'))
 WebUI.verifyEqual(badgeText.trim(), '0')
-
-// Verifikasi tidak ada card pasien yang tampil di sidebar
-WebUI.verifyElementNotPresent(findTestObject('Pembayaran Kasir/div_Card Pasien Andhika'), 3)
 
 WebUI.closeBrowser()

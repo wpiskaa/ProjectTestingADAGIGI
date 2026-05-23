@@ -7,11 +7,11 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//h2[contains(., "Menunggu Pembayaran")]/following-sibling::span</value>
+         <value>//span[contains(@class,'bg-purple-100') and contains(@class,'text-purple-600')]</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>span.bg-purple-100</value>
+         <value>span.bg-purple-100.text-purple-600</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -36,7 +36,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//h2[contains(., "Menunggu Pembayaran")]/following-sibling::span</value>
+      <value>//span[contains(@class,'bg-purple-100') and contains(@class,'text-purple-600')]</value>
       <webElementGuid>941997ad-01dd-48bc-996d-6959bfd056ef</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

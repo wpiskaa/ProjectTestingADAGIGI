@@ -7,11 +7,11 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//span[@class="no-rm"] | //td[contains(.,"RM")]</value>
+         <value>//td[normalize-space(text())='No. RM']/following-sibling::td</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>.no-rm</value>
+         <value>td.text-right.font-bold</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -28,7 +28,7 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>span</value>
+      <value>td</value>
       <webElementGuid>bcede081-4bc1-41a9-a3ac-9513824a2754</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
@@ -36,7 +36,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//span[@class="no-rm"] | //td[contains(.,"RM")]</value>
+      <value>//td[normalize-space(text())='No. RM']/following-sibling::td</value>
       <webElementGuid>5cafb234-10c7-47d2-a34e-3e1918d831bb</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

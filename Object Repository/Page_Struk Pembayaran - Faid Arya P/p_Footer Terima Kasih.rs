@@ -7,11 +7,11 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//p[contains(.,"Terima kasih")]</value>
+         <value>//p[contains(text(),'Terima Kasih Atas Kunjungan Anda')]</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>.footer p</value>
+         <value>div.text-center p</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -36,7 +36,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//p[contains(.,"Terima kasih")]</value>
+      <value>//p[contains(text(),'Terima Kasih Atas Kunjungan Anda')]</value>
       <webElementGuid>c046399d-27b8-48d2-9427-6b3cf4cec397</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -19,21 +19,41 @@ import org.openqa.selenium.Keys as Keys
 
 // TC-11.1: Memeriksa Fungsi Daftar Tagihan Pending (Ada Data)
 // Tester: Hafiz Kurniawan | Tanggal: 21-Apr-26 | Status: Pass
-// Deskripsi: Memeriksa perilaku sistem saat ada data tagihan pending di sidebar kasir
 
+// 1. Membuka browser Chrome
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/views/kasir.php')
+// Reset database state to default (Andhika is pending)
+WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/reset_db.php?state=default')
 
-// Verifikasi judul halaman "Pembayaran Kasir"
+// 2. Mengakses halaman Home index.php
+WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/index.php')
+WebUI.waitForPageLoad(10)
+WebUI.verifyTextPresent('Sistem Manajemen Klinik', false)
+
+// 3. Mengklik menu Pembayaran untuk masuk ke kasir.php
+WebUI.click(findTestObject('Page_Sistem Manajemen Klinik/a_Pembayaran'))
+WebUI.waitForPageLoad(10)
 WebUI.verifyElementPresent(findTestObject('Pembayaran Kasir/h1_Pembayaran Kasir'), 10)
-
 WebUI.verifyTextPresent('Pembayaran Kasir', false)
 
-// Verifikasi sidebar daftar pasien pending tampil
+// 4. Melihat sidebar sebelah kiri (Daftar pasien pending)
 WebUI.verifyElementPresent(findTestObject('Pembayaran Kasir/div_Sidebar Pasien Pending'), 10)
+WebUI.verifyTextPresent('Menunggu Pembayaran', false)
 
-// Verifikasi minimal ada 1 card pasien pending di sidebar
+// 5. Memeriksa informasi pada card pasien
 WebUI.verifyElementPresent(findTestObject('Pembayaran Kasir/div_Card Pasien Andhika'), 10)
+WebUI.verifyTextPresent('Andhika', false)
+WebUI.verifyTextPresent('RM:', false)
+WebUI.verifyTextPresent('Rp 200.000', false)
+WebUI.verifyTextPresent('Pending', false)
+WebUI.verifyTextPresent('WIB', false)
+
+// 6. Memeriksa badge counter di header sidebar
+WebUI.verifyElementPresent(findTestObject('Pembayaran Kasir/span_Badge Counter'), 10)
+String badgeText = WebUI.getText(findTestObject('Pembayaran Kasir/span_Badge Counter'))
+WebUI.comment('Badge counter: ' + badgeText.trim())
+int count = Integer.parseInt(badgeText.trim())
+WebUI.verifyGreaterThan(count, 0)
 
 WebUI.closeBrowser()

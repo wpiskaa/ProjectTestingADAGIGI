@@ -19,44 +19,59 @@ import org.openqa.selenium.Keys as Keys
 
 // TC-16.1: Memeriksa Fungsi Auto-Print Struk
 // Tester: Hafiz Kurniawan | Tanggal: 21-Apr-26 | Status: Pass
-// Deskripsi: Memeriksa dialog print otomatis muncul dan tombol "Kembali ke Kasir" tidak ikut tercetak
 
+// 1. Membuka browser
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/views/kasir.php')
+// Reset database state to default
+WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/reset_db.php?state=default')
 
-// Pilih pasien dan lakukan konfirmasi pembayaran agar redirect ke struk
-WebUI.verifyElementPresent(findTestObject('Pembayaran Kasir/div_Card Pasien Andhika'), 10)
+// 2. Mengakses halaman Home index.php
+WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/index.php')
+WebUI.waitForPageLoad(10)
+
+// 3. Mengklik menu Pembayaran
+WebUI.click(findTestObject('Page_Sistem Manajemen Klinik/a_Pembayaran'))
+WebUI.waitForPageLoad(10)
+
+// 4. Memilih pasien Andhika dari daftar pending
 WebUI.click(findTestObject('Pembayaran Kasir/div_Card Pasien Andhika'))
-
-WebUI.delay(1)
-
-WebUI.click(findTestObject('Pembayaran Kasir/button_Konfirmasi Pembayaran  Cetak Struk'))
-
-// Tunggu redirect ke halaman cetak_struk.php
 WebUI.delay(2)
 
-// Verifikasi redirect ke halaman struk berhasil (dialog print dipicu oleh onload="window.print()")
+// 5. Mengklik tombol "Konfirmasi Pembayaran & Cetak Struk" untuk redirect ke struk
+WebUI.click(findTestObject('Pembayaran Kasir/button_Konfirmasi Pembayaran  Cetak Struk'))
+
+// Handle first alert (Confirm: "Apakah data yang dimasukkan sudah benar?")
+if (WebUI.verifyAlertPresent(5, FailureHandling.OPTIONAL)) {
+    WebUI.acceptAlert()
+}
+
+WebUI.delay(2)
+
+// Handle second alert (Alert: "Pembayaran Berhasil! Mengalihkan...")
+if (WebUI.verifyAlertPresent(5, FailureHandling.OPTIONAL)) {
+    WebUI.acceptAlert()
+}
+WebUI.delay(3)
+
+// Verifikasi URL adalah halaman struk
 String currentUrl = WebUI.getUrl()
 WebUI.verifyMatch(currentUrl, '.*/cetak_struk\\.php.*', true)
-
-// Verifikasi halaman struk dimuat
 WebUI.verifyElementPresent(findTestObject('Page_Struk Pembayaran - Faid Arya P/div_Konten Struk'), 10)
 
-// Dismiss dialog print jika muncul (tekan Escape)
-WebUI.sendKeys(findTestObject('Page_Struk Pembayaran - Faid Arya P/div_Konten Struk'), Keys.ESCAPE)
+// Dismiss dialog print (jika ada) dengan Escape
+WebUI.sendKeys(findTestObject('Page_Struk Pembayaran - Faid Arya P/a_Kembali ke Kasir'), Keys.chord(Keys.ESCAPE))
+WebUI.delay(2)
 
-WebUI.delay(1)
-
-// Verifikasi tombol "Kembali ke Kasir" tampil di layar (class no-print)
+// 6. Memeriksa tombol "Kembali ke Kasir" terlihat pada halaman
 WebUI.verifyElementPresent(findTestObject('Page_Struk Pembayaran - Faid Arya P/a_Kembali ke Kasir'), 10)
+WebUI.verifyTextPresent('Kembali ke Kasir', false)
 
-// Klik tombol "Kembali ke Kasir"
+// 7. Mengklik tombol "Kembali ke Kasir"
 WebUI.click(findTestObject('Page_Struk Pembayaran - Faid Arya P/a_Kembali ke Kasir'))
+WebUI.delay(2)
 
-WebUI.delay(1)
-
-// Verifikasi berpindah ke halaman kasir.php
+// Verifikasi berpindah kembali ke halaman kasir.php
 String finalUrl = WebUI.getUrl()
 WebUI.verifyMatch(finalUrl, '.*/kasir\\.php.*', true)
 

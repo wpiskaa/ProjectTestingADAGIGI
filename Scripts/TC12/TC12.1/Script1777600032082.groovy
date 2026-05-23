@@ -19,30 +19,43 @@ import org.openqa.selenium.Keys as Keys
 
 // TC-12.1: Memeriksa Fungsi Detail Ringkasan Tagihan (Pilih Pasien)
 // Tester: Hafiz Kurniawan | Tanggal: 21-Apr-26 | Status: Pass
-// Deskripsi: Memeriksa panel detail billing tampil benar saat kasir klik card pasien Andhika
 
+// 1. Membuka browser Chrome
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/views/kasir.php')
+// Reset database state to default
+WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/reset_db.php?state=default')
 
-// Klik card pasien Andhika di sidebar
+// 2. Mengakses halaman Home index.php
+WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/index.php')
+WebUI.waitForPageLoad(10)
+
+// 3. Mengklik menu Pembayaran untuk masuk ke kasir.php
+WebUI.click(findTestObject('Page_Sistem Manajemen Klinik/a_Pembayaran'))
+WebUI.waitForPageLoad(10)
+
+// 4. Mengklik card pasien Andhika di sidebar
 WebUI.verifyElementPresent(findTestObject('Pembayaran Kasir/div_Card Pasien Andhika'), 10)
-
 WebUI.click(findTestObject('Pembayaran Kasir/div_Card Pasien Andhika'))
+WebUI.delay(2)
 
-WebUI.delay(1)
+// Verifikasi URL berubah ke ?id_periksa=X
+String currentUrl = WebUI.getUrl()
+WebUI.verifyMatch(currentUrl, '.*\\?id_periksa=.*', true)
 
-// Verifikasi panel detail tampil (border berubah menjadi purple)
+// 5. Melihat panel kanan (Panel Ringkasan Tagihan)
 WebUI.verifyElementPresent(findTestObject('Pembayaran Kasir/div_Panel Detail Pasien'), 10)
 
-// Verifikasi nama pasien "Andhika" tampil di panel detail
+// 6. Memeriksa data Nama Pasien "Andhika"
 WebUI.verifyTextPresent('Andhika', false)
 
-// Verifikasi No. RM pasien tampil
-WebUI.verifyTextPresent('RM2026010100005', false)
+// 7. Memeriksa data Nomor RM
+WebUI.verifyTextPresent('RM2026010100003', false)
 
-// Verifikasi field Total Biaya dapat diedit (input tersedia)
+// 8. Memeriksa field Total Biaya
 WebUI.verifyElementPresent(findTestObject('Pembayaran Kasir/input_Total Biaya'), 10)
+String totalValue = WebUI.getAttribute(findTestObject('Pembayaran Kasir/input_Total Biaya'), 'value')
+WebUI.verifyEqual(totalValue, '200000')
 
 // Verifikasi tombol Konfirmasi Pembayaran & Cetak Struk tampil
 WebUI.verifyElementPresent(findTestObject('Pembayaran Kasir/button_Konfirmasi Pembayaran  Cetak Struk'), 10)

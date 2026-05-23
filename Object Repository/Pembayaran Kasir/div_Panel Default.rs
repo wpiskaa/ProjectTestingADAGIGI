@@ -7,11 +7,11 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[contains(@class,"text-center") and contains(.,"selesai diperiksa")]</value>
+         <value>//p[contains(text(),'selesai diperiksa')]/ancestor::div[contains(@class,'lg:col-span-8')]</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>.text-center</value>
+         <value>div.lg\:col-span-8</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -36,7 +36,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//div[contains(@class,"text-center") and contains(.,"selesai diperiksa")]</value>
+      <value>//p[contains(text(),'selesai diperiksa')]/ancestor::div[contains(@class,'lg:col-span-8')]</value>
       <webElementGuid>b402e1ea-d01e-4fa2-92cd-a77bbc389b4b</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

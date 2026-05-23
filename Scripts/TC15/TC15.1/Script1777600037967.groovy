@@ -19,30 +19,71 @@ import org.openqa.selenium.Keys as Keys
 
 // TC-15.1: Memeriksa Fungsi Cetak Struk Pembayaran (Konten Lengkap)
 // Tester: Hafiz Kurniawan | Tanggal: 21-Apr-26 | Status: Pass
-// Deskripsi: Memeriksa semua informasi struk tampil lengkap dan benar
 
+// 1. Membuka browser
 WebUI.openBrowser('')
 
-// Akses halaman struk dengan id_periksa valid
-WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/views/cetak_struk.php?id_periksa=1')
+// Reset database state to default
+WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/reset_db.php?state=default')
 
-WebUI.delay(1)
+// 2. Mengakses halaman Home index.php
+WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/index.php')
+WebUI.waitForPageLoad(10)
 
-// Verifikasi konten struk tampil
+// 3. Mengklik menu Pembayaran
+WebUI.click(findTestObject('Page_Sistem Manajemen Klinik/a_Pembayaran'))
+WebUI.waitForPageLoad(10)
+
+// 4. Memilih pasien Andhika
+WebUI.click(findTestObject('Pembayaran Kasir/div_Card Pasien Andhika'))
+WebUI.delay(2)
+
+// 5. Konfirmasi pembayaran
+WebUI.click(findTestObject('Pembayaran Kasir/button_Konfirmasi Pembayaran  Cetak Struk'))
+
+// Handle first alert (Confirm: "Apakah data yang dimasukkan sudah benar?")
+if (WebUI.verifyAlertPresent(5, FailureHandling.OPTIONAL)) {
+    WebUI.acceptAlert()
+}
+
+WebUI.delay(2)
+
+// Handle second alert (Alert: "Pembayaran Berhasil! Mengalihkan...")
+if (WebUI.verifyAlertPresent(5, FailureHandling.OPTIONAL)) {
+    WebUI.acceptAlert()
+}
+WebUI.delay(3)
+
+// Verifikasi dialihkan ke cetak_struk.php
+String currentUrl = WebUI.getUrl()
+WebUI.verifyMatch(currentUrl, '.*/cetak_struk\\.php.*', true)
+
+// 6. Memeriksa header struk (Nama klinik, alamat, WA)
+WebUI.verifyElementPresent(findTestObject('Page_Struk Pembayaran - Faid Arya P/div_Praktik dokter gigi anak dan dokter gigi'), 10)
+WebUI.verifyTextPresent('Praktik dokter gigi anak dan dokter gigi', false)
+WebUI.verifyTextPresent('Dulang Asri RT 15', false)
+WebUI.verifyTextPresent('08112959191', false)
+
+// 7. Memeriksa data waktu
 WebUI.verifyElementPresent(findTestObject('Page_Struk Pembayaran - Faid Arya P/div_Konten Struk'), 10)
 
-// Verifikasi No. RM tampil di struk
+// 8. Memeriksa data No. RM
 WebUI.verifyElementPresent(findTestObject('Page_Struk Pembayaran - Faid Arya P/span_Nomor RM'), 10)
+WebUI.verifyTextPresent('RM2026010100003', false)
 
-// Verifikasi nama pasien tampil (Andhika)
+// 9. Memeriksa data Pasien (Andhika) dan Dokter (Hanifah)
 WebUI.verifyTextPresent('Andhika', false)
+WebUI.verifyTextPresent('Hanifah', false)
 
-// Verifikasi total biaya tampil
-WebUI.verifyTextPresent('150.000', false)
+// 10. Memeriksa rincian tindakan
+WebUI.verifyTextPresent('restorasi gigi', false)
 
-// Verifikasi footer "Terima kasih" tampil
+// 11. Memeriksa Total Biaya
+WebUI.verifyTextPresent('Rp 200.000', false)
+
+// 12. Memeriksa footer
 WebUI.verifyElementPresent(findTestObject('Page_Struk Pembayaran - Faid Arya P/p_Footer Terima Kasih'), 10)
-
-WebUI.verifyTextPresent('Terima kasih', false)
+WebUI.verifyTextPresent('Terima Kasih', false)
+WebUI.verifyTextPresent('Semoga Lekas Sembuh', false)
 
 WebUI.closeBrowser()

@@ -7,11 +7,11 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id="struk"]</value>
+         <value>//div[contains(@class,'struk-container')]</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#struk</value>
+         <value>div.struk-container</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -36,7 +36,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//div[@id="struk"]</value>
+      <value>//div[contains(@class,'struk-container')]</value>
       <webElementGuid>7e71528c-fa65-42c0-8dc4-6ff7c8384a39</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

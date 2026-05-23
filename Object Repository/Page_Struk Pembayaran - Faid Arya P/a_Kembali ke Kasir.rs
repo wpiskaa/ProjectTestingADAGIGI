@@ -7,11 +7,11 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//a[contains(.,"Kembali ke Kasir")]</value>
+         <value>//button[contains(text(),'Kembali ke Kasir')]</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>.no-print a</value>
+         <value>div.no-print button</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -28,7 +28,7 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>a</value>
+      <value>button</value>
       <webElementGuid>91fb5d9e-00ba-4e2d-8489-8a7173eceab4</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
@@ -36,7 +36,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//a[contains(.,"Kembali ke Kasir")]</value>
+      <value>//button[contains(text(),'Kembali ke Kasir')]</value>
       <webElementGuid>ba1f8086-daf6-440d-af12-6ffb1b58fb81</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

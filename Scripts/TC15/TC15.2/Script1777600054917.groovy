@@ -19,20 +19,27 @@ import org.openqa.selenium.Keys as Keys
 
 // TC-15.2: Memeriksa Fungsi Cetak Struk - Error Handling
 // Tester: Hafiz Kurniawan | Tanggal: 21-Apr-26 | Status: Pass
-// Deskripsi: Memeriksa sistem menangani error saat parameter id_periksa tidak valid
 
+// 1. Membuka browser
 WebUI.openBrowser('')
 
-// Akses cetak_struk.php tanpa parameter id_periksa
+// 2. Mengakses halaman Home index.php
+WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/index.php')
+WebUI.waitForPageLoad(10)
+
+// 3. Mengakses cetak_struk.php tanpa parameter id_periksa
 WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/views/cetak_struk.php')
+WebUI.waitForPageLoad(10)
 
-WebUI.delay(1)
+// Verifikasi pesan error "Data transaksi tidak ditemukan!"
+WebUI.verifyTextPresent('Data transaksi tidak ditemukan', false)
+WebUI.verifyTextNotPresent('Fatal error', false)
 
-// Verifikasi sistem menangani error dengan graceful (tidak crash / tampil error PHP yang tertangkap)
-// Expected: halaman tampil error handling atau redirect
-String pageSource = WebUI.getPageSource()
+// 4. Mengakses cetak_struk.php?id_periksa=99999 (ID tidak ada)
+WebUI.navigateToUrl('http://localhost/ADAGIGI-main/ADAGIGI-main/views/cetak_struk.php?id_periksa=99999')
+WebUI.waitForPageLoad(10)
 
-// Verifikasi tidak ada fatal error yang tidak tertangkap
-WebUI.verifyNotMatch(pageSource, '.*Fatal error.*', true)
+// Verifikasi tidak ada fatal error PHP
+WebUI.verifyTextNotPresent('Fatal error', false)
 
 WebUI.closeBrowser()

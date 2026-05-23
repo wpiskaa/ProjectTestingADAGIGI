@@ -7,11 +7,11 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//h2[contains(., "Menunggu Pembayaran")]/ancestor::div[contains(@class, "lg:col-span-4")]</value>
+         <value>//h2[normalize-space(text())='Menunggu Pembayaran']/ancestor::div[contains(@class,'lg:col-span-4')]</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>.lg\:col-span-4</value>
+         <value>div.lg\:col-span-4</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -36,7 +36,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//h2[contains(., "Menunggu Pembayaran")]/ancestor::div[contains(@class, "lg:col-span-4")]</value>
+      <value>//h2[normalize-space(text())='Menunggu Pembayaran']/ancestor::div[contains(@class,'lg:col-span-4')]</value>
       <webElementGuid>7c7b91d0-1609-4684-93db-c8cd3f82d6e5</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
